@@ -3,6 +3,18 @@ import ReactDOM from 'react-dom';
 import App from './componentes/App';
 import * as serviceWorker from './serviceWorker';
 
+import { injectGlobal } from 'styled-components'
+
+injectGlobal`
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+body{
+    margin:0;
+}
+`
+
+
+
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
