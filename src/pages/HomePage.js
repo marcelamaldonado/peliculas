@@ -1,9 +1,14 @@
 import React from 'react'
 
+import Destaque from '../componentes/Destaque'
+import Estrenos from '../componentes/Estrenos'
 class HomePage extends React.Component{
     render(){
         return(
-            <div>Home HomePage</div>
+            <div>
+            <Destaque/>
+            <Estrenos/>
+            </div>
         );
     }
 }
