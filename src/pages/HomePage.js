@@ -6,6 +6,7 @@ import Estrenos from '../componentes/Estrenos';
 import styled from 'styled-components'
 
 import TituloSeccion from '../componentes/TituloSeccion'
+import {connect} from 'react-redux'
 
 
 class HomePage extends React.Component {

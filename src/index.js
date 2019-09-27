@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux'
 
+import reducers from './redux/reducers'
 import App from './componentes/App';
 import * as serviceWorker from './serviceWorker';
 
 import { createGlobalStyle } from 'styled-components'
-import reducers from './reducers';
+
 
 createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Anton|Cinzel|Rock+Salt&display=swap');
