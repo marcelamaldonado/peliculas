@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
-const urlbaseImage = 'https://image.tmdb.org/t/p/w300'
+const urlbaseImage = 'https://image.tmdb.org/t/p/w154'
 
 const Contenedor = styled.div`
     >ul{
@@ -10,12 +11,14 @@ const Contenedor = styled.div`
         overflow:scroll;
         display:flex;
         align-items:strech;
+        margin:0;
     }
 `
-const ItemPelicula = styled.li`
+const ItemPelicula = styled(Link)`
     list-style:none;
     display:inline-block;
     background:url(${props=>urlbaseImage+props.pelicula.poster_path}) no-repeat;
+    background-size:cover;
     min-width:200px;
     margin:5px;
     height:300px;
@@ -35,15 +38,15 @@ const ItemPelicula = styled.li`
 `
 
 export default ({ peliculas }) => (
-    <Contenedor>
-        <ul>
-            {
-                peliculas.map(pelicula => (
-                    <ItemPelicula key={pelicula.id} pelicula={pelicula}>
-                    <span>{pelicula.title}</span>
-                    </ItemPelicula>
-                ))
-            }
-        </ul>
-    </Contenedor>
+<Contenedor>
+ <ul>
+    {
+        peliculas.map(pelicula => (
+         <ItemPelicula key={pelicula.id} to={`/detalles/${pelicula.id}`} pelicula={pelicula}>
+         <span>{pelicula.title}</span>
+            </ItemPelicula>
+        ))
+    }
+  </ul>
+ </Contenedor>
 )
