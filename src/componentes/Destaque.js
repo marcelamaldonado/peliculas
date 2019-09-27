@@ -6,7 +6,7 @@ const urlbaseImage = 'https://image.tmdb.org/t/p/w780'
 const Inicio = styled.div`
 background: url(${props=>urlbaseImage+props.pelicula.backdrop_path}) no-repeat;
 background-size:cover;
-height:700px;
+height:500px;
 color:White;
 font-size:22px;
 font-family:"Anton", sans-serif;
