@@ -7,8 +7,8 @@ color:White;
 font-family: 'Anton', sans-serif;
 `
 
-export default ()=>(
+export default ({pelicula})=>(
     <Inicio>
-    Pelicula Destacada
+   {pelicula.title}
     </Inicio>
 )

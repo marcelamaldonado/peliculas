@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import { createGlobalStyle } from 'styled-components'
 
 createGlobalStyle`
-@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Anton&display=swap');
 body{
     margin:0;
 }
