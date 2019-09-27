@@ -17,6 +17,7 @@ class HomePage extends React.Component {
     componentDidMount() {
         this.getData()
         this.getProximosEstrenos()
+        console.log(this.props.test.test)
     }
     //Metodo para que la API nos devuelva proximos estrenos movies
     getProximosEstrenos = async () => {
