@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const urlbaseImage = 'https://image.tmdb.org/t/p/w780'
 
 const Inicio = styled.div`
-background: url(${props=>urlbaseImage+props.pelicula.backdrop_path}) no-repeat;
+background: url(${props => urlbaseImage + props.pelicula.backdrop_path}) no-repeat;
 background-size:cover;
 height:500px;
 color:White;
@@ -35,15 +35,30 @@ const VotoPromedio = styled.span`
 color: rgba(100,221,23,1);
 font-family:"Cinzel",serif;
 `
-
-export default ({pelicula})=>(
-    <Inicio pelicula={pelicula}>
-    <PeliculaInfo>
-        <PeliculaInfoContent>
-            <PeliculaInfoTitulo>{pelicula.title}</PeliculaInfoTitulo>
-            <PeliculaInfoOverview>{pelicula.overview}</PeliculaInfoOverview>
-            <VotoPromedio>{pelicula.vote_average}/10</VotoPromedio>      
-        </PeliculaInfoContent>
-    </PeliculaInfo>
-    </Inicio>
-)
+const Cargando = styled.div`
+text-align:center;
+font-size:22px;
+`
+export default ({ pelicula }) => {
+    // pregunta si la propiedad pelicula tiene info renderizar el contenido 
+    // sino devolver el componente Cargando
+    if (pelicula) {
+        return (
+            <div>
+                <Inicio pelicula={pelicula}>
+                    <PeliculaInfo>
+                        <PeliculaInfoContent>
+                            <PeliculaInfoTitulo>{pelicula.title}</PeliculaInfoTitulo>
+                            <PeliculaInfoOverview>{pelicula.overview}</PeliculaInfoOverview>
+                            <VotoPromedio>{pelicula.vote_average}/10</VotoPromedio>
+                        </PeliculaInfoContent>
+                    </PeliculaInfo>
+                </Inicio>
+            </div>
+        )
+    } else {
+        return (
+            <Cargando>Cargando..</Cargando>
+        )
+    }
+}
