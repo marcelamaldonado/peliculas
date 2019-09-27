@@ -14,13 +14,13 @@ justify-content:space-between;
 }
 `
 const Fecha = styled.div`
-
+padding:30px;
 `
 
 
 export default ({fecha})=>(
     <Contenedor>
         <h3>That`s My Movie</h3>
-        <Fecha>{fecha.toString()}</Fecha>
+        <Fecha>{fecha.toLocaleString()}</Fecha>
     </Contenedor>
 )
