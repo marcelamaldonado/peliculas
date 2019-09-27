@@ -5,12 +5,8 @@ import Destaque from '../componentes/Destaque';
 import Estrenos from '../componentes/Estrenos';
 import styled from 'styled-components'
 
-const TituloSeccion = styled.h1`
-background: rgba(120,144,156,1);
-color:white;
-margin:0;
-padding:12px;
-`
+import TituloSeccion from '../componentes/TituloSeccion'
+
 
 class HomePage extends React.Component {
     state = {
