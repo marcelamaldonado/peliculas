@@ -65,4 +65,10 @@ class HomePage extends React.Component {
     }
 }
 
-export default HomePage
+function mapStateToProps({test}) {
+    return{
+        test
+    }
+}
+
+export default connect(mapStateToProps)(HomePage); 
